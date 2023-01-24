@@ -11,5 +11,5 @@ runs:
   
   steps:
     - id: "random-name-step"
-      run: echo "random-name=lucy" >> $GITHUB_OUTOUT
+      run: echo "random-name=lucy" >> $GITHUB_OUTPUT
       shell: bash
