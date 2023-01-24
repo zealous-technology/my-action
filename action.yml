@@ -1,0 +1,15 @@
+name: "my custom action"
+description: "an action that returns a string name"
+
+outputs:
+  name:
+    description: "random name"
+    value: ${{ steps.random-name-step.outputs.random-name }}
+    
+runs:
+  using: "composite"
+  
+  steps:
+    - id: "random-name-step"
+      run: echo "random-name=lucy" >> $GITHUB_OUTOUT
+      shell: bash
